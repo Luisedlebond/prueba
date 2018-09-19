@@ -1,6 +1,6 @@
-# de con www a sin www
-RewriteCond %{HTTP_HOST} ^www.(.*) [NC]
-RewriteRule ^(.*) http://%1/$1 [R=301,L]
+# de sin www a con www
+RewriteCond %{HTTP_HOST} !^www.
+RewriteRule ^(.*)$ http://www.%{HTTP_HOST}/$1 [R=301,L]
 
 #REDIRECCIÓN DE HTTPS A HTTP CON 301
 RewriteEngine on
