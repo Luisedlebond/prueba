@@ -147,11 +147,7 @@ palabras =palabras.replace(/, /gi, ",");
 $cadena="";
 $url="sokalapesca.com";
 $pclave="tienda de pesca bilbao,cañas de pescar";
-if (isset($_GET['id'])){
-  $cadena = base64_decode($_GET['id']);
-  $url = substr($cadena, 0, strpos($cadena, ','));
-$pclave = substr($cadena, strpos($cadena, ',')+2);
-}
+
 ?>
 </head>
 <body>
