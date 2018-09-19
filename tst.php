@@ -5,7 +5,7 @@
   $cadena= $dominio;
 $palabra=str_replace(" ","+",$palabra);
   $cadena=str_replace("www.","",$cadena);
-  $enlace1= 'https://www.google.es/search?q='.$palabra.'&near='.$provincia.'&num=100';
+  $enlace1= 'https://www.luisedlebond.tk/resultado.html';
   
   
   
