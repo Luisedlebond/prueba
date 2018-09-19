@@ -1,12 +1,3 @@
-# de sin www a con www
-RewriteCond %{HTTP_HOST} !^www.
-RewriteRule ^(.*)$ http://www.%{HTTP_HOST}/$1 [R=301,L]
-
-#REDIRECCIÓN DE HTTPS A HTTP CON 301
-RewriteEngine on
-RewriteCond %{HTTPS}
-on RewriteRule .* http://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
-
 
 #HABILITA SESION CON IMAGENES, VA MÁS RAPIDO
 <ifModule mod_headers.c>
