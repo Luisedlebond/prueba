@@ -27,13 +27,23 @@ $useragent = "Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.8.1.1) Gecko/
 
 $ch = curl_init();
 
-// set user agent
-curl_setopt($ch, CURLOPT_USERAGENT, $useragent);
+$proxyauth = 'seronop10:y4dxgdr4Yc';
+$proxy = '46.226.147.127';
+$proxyPort = '8080';
+$ch = curl_init();
 curl_setopt($ch, CURLOPT_URL, $url);
-curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
-curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 2);
-curl_setopt($ch, CURLOPT_TIMEOUT, 60);
+//proxy suport
+curl_setopt($ch, CURLOPT_PROXY, $proxy);
+curl_setopt($ch, CURLOPT_PROXYPORT, $proxyPort);
+curl_setopt($ch, CURLOPT_PROXYUSERPWD, $proxyauth);
+curl_setopt($ch, CURLOPT_PROXYTYPE, 'HTTP');
+curl_setopt($ch, CURLOPT_HTTPPROXYTUNNEL, 1);
+//https
+curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+curl_setopt($ch, CURLOPT_USERAGENT, $useragent);
 curl_setopt($ch, CURLOPT_HEADER, 0);
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+curl_setopt($ch, CURLOPT_TIMEOUT, 100);
 
 // grab content from the website
 $content = curl_exec($ch);
