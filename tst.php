@@ -1,6 +1,6 @@
 <?php
   $provincia= "bilbao";
-  $palabra= "tienda de pesca bilbao,cañas de pescar";
+  $palabra= "tienda+de+pesca+bilbao";
   $dominio= "sokalapesca.com";
   $cadena= $dominio;
 $palabra=str_replace(" ","+",$palabra);
